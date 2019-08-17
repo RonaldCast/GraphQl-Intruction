@@ -9,12 +9,19 @@ const {buildSchema} = require('graphql');
 //data
 
 
+//Mutation: se usan para en actualizar el estado
 
 const schema = buildSchema(`
+
     type Query{
-        course(id:Int!): Course
+        course(id: Int!): Course
         courses(topic: String): [Course]
     }
+
+    type Mutation{
+        updateCourseTopic(id: Int!, topic: String): Course
+    }
+
     type Course {
         id: Int,
         title: String,
@@ -41,14 +48,24 @@ let getCourses = (args) => {
     }else{
         return courses;
     }
-    
-  
+}
+
+let updateCourseTopic = ({id, topic})=> {
+    courses.map(course => {
+        if(course.id === id){
+            course.topic = topic
+            return course;
+        }
+    })
+
+    return courses.find(n => n.id === id)
 }
 
 //una funcion que retorna
 const root = {
   course: getCourse,
-  courses: getCourses
+  courses: getCourses,
+  updateCourseTopic: updateCourseTopic
 };
 
 //integrando grapQL

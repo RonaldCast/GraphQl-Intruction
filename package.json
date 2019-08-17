@@ -1,0 +1,25 @@
+{
+  "name": "graphql-init",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RonaldCast/GraphQl-Intruction.git"
+  },
+  "author": "Ronald",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RonaldCast/GraphQl-Intruction/issues"
+  },
+  "homepage": "https://github.com/RonaldCast/GraphQl-Intruction#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.4.2"
+  }
+}

@@ -1,0 +1,6 @@
+GraphQL es un lenguaje de consulta, nos facilita la consulta a la 
+hora de consumir una API
+
+instalación 
+* npm graphQL
+* npm express-graphQL para comunicarse con express
